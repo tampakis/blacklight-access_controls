@@ -6,7 +6,7 @@ RSpec.describe Blacklight::AccessControls::SearchBuilder do
   let(:search_builder) do
     described_class.new(controller, ability: ability)
   end
-  let(:controller) { double }
+  let(:controller) { CatalogController.new }
   let(:user) { User.new }
   let(:ability) { Ability.new(user) }
 
